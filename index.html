@@ -32,7 +32,13 @@
     scrollWheelZoom: false,
     tap: false
   });
-var geojsonFeature=Macbeth.geojson
-  L.geoJSON(geojsonFeature).addTo(map);
+$.getJSON("data/Macbeth.geojson", function(data) {
+    geojson = L.geoJSON(data, {
+        onEachFeature: function(feature, layer) {
+            layer.bindPopup(feature.properties.Setting);
+        },
+        style: style
+    }).addTo(map);
+});
 </body>
 </html>
