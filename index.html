@@ -26,12 +26,12 @@
     <script>
         var map = L.map("map", {center: [54.6149,	-1.27685], zoom: 4});
         var line = L.polyline(
-            [[57.6157,-3.5977], [57.611189,-3.605144]], 
+            [[-3.5977,57.6157], [-3.605144,57.611189]], 
             {color: "red", weight: 10}
         ).addTo(map);
         var pnt = L.marker([54.6149,	-1.27685]).addTo(map);
         L.circleMarker(
-            [57.6157,-3.5977], 
+            [-3.5977,57.6157], 
             {radius: 50, color: "black", fillColor: "red"}
         ).addTo(map);
         L.tileLayer(
