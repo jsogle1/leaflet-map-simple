@@ -41,7 +41,7 @@
         <a href="https://carto.com/attribution">CARTO</a>'
   }).addTo(map);
   /* Add Geojson */
-  var MacbethSettings = "https://github.com/jsogle1/leaflet-map-simple"
+  var MacbethSettings = "https://github.com/jsogle1/leaflet-map-simple/Macbeth.geojson"
       $.getJSON(MacbethSettings, function(response) {
     var geojsonLayer = new L.GeoJSON(response, {
         style: style,
