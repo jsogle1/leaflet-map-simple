@@ -41,17 +41,12 @@
         <a href="https://carto.com/attribution">CARTO</a>'
   }).addTo(map);
   /* Add Geojson */
-  var MacbethSettings = "https://github.com/jsogle1/leaflet-map-simple/Macbeth.geojson"
-      $.getJSON(MacbethSettings, function(response) {
-    var geojsonLayer = new L.GeoJSON(response, {
-        style: style,
-        onEachFeature: onEachFeature
-    });
-    geojsonLayer.addTo(map);    
-});
-
+  $.getJSON("https://github.com/jsogle1/leaflet-map-simple/Macbeth.geojson", function(response) {
+    console.log("response", response);
+    var geojsonLayer = new L.GeoJSON(response);
+    geojsonLayer.addTo(map); 
   /* Display a point marker with pop-up text */
-  L.marker([41.77, -72.69]).addTo(map) // EDIT marker coordinates
+  L.marker([54.6149,	-1.07685]).addTo(map) // EDIT marker coordinates
   .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
 
   </script>
