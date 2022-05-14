@@ -45,6 +45,7 @@
     console.log("response", response);
     var geojsonLayer = new L.GeoJSON(response);
     geojsonLayer.addTo(map); 
+    });
   /* Display a point marker with pop-up text */
   L.marker([54.6149,	-1.07685]).addTo(map) // EDIT marker coordinates
   .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
