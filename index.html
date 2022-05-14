@@ -32,13 +32,10 @@
     scrollWheelZoom: false,
     tap: false
   });
-$.getJSON("data/Macbeth.geojson", function(data) {
-    geojson = L.geoJSON(data, {
-        onEachFeature: function(feature, layer) {
-            layer.bindPopup(feature.properties.Setting);
-        },
-        style: style
-    }).addTo(map);
+var url = "https://github.com/jsogle1/leaflet-map-simple/blob/main/data/" + 
+    "Macbeth.geojson";
+$.getJSON(url, function(data) {
+    L.geoJSON(data).addTo(map);
 });
 </body>
 </html>
