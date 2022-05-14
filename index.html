@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,12 +16,20 @@
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
    crossorigin=""/>
+  body {
+    padding: 0;
+    margin: 0;
+}
+html, body, #map {
+    height: 100%;
+    width: 100%;
+}
   </style>
 </head>
 <body>
   <!-- Display the map and title with HTML division tags  -->
   <div id="map"></div>
-  #map { height: 180px; float: left; }
+  
 
   <!-- Create the interactive map content with JavaScript (.js) -->
   <script>
