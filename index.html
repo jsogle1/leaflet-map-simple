@@ -99,11 +99,6 @@
                 )
                 .openOn(map);
         }
-        L.tileLayer(
-            "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", 
-            {attribution: '&copy; <a href="http://' + 
-            'www.openstreetmap.org/copyright">OpenStreetMap</a>'}
-        ).addTo(map);
         var someFeatures = [{
            "type": "FeatureCollection",
            "features": [
@@ -445,12 +440,16 @@
           }
         ]
         }];
-
         L.geoJSON(someFeatures, {
             filter: function(feature, layer) {
                 return feature.properties.show_on_map;
             }
         }).addTo(map);
+        L.tileLayer(
+            "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", 
+            {attribution: '&copy; <a href="http://' + 
+            'www.openstreetmap.org/copyright">OpenStreetMap</a>'}
+        ).addTo(map);
     </script>
 </body>
 </html>
