@@ -100,7 +100,7 @@
                 .openOn(map);
         }
         map.on("click", onMapClick);
-        $.getJSON("data/Macbeth.geojson", function(data) {
+        $.getJSON("Macbeth.geojson", function(data) {
             L.geoJSON(data).addTo(map);
         });
         L.tileLayer(
