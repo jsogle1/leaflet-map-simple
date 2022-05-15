@@ -98,25 +98,26 @@
                 )
                 .openOn(map);
         }
+
         function onEachFeature(feature, layer) {
             // does this feature have a property named popupContent?
-            if (feature.properties && feature.properties.Setting) {
-                layer.bindPopup(feature.properties.Setting);
+            if (feature.properties && feature.properties.popupContent) {
+                layer.bindPopup(feature.properties.popupContent);
             }
         }
 
         var geojsonFeature = {
             "type": "Feature",
-            "geometry": {
-               "type": "Point",
-               "coordinates":  [ 57.6157,-3.5977 ]
-            },
             "properties": {
-            "Play":"Macbeth",
-            "Setting":"An open Place.",
-            "Act_Scene":"Act I Scene I"
+                "name": "Coors Field",
+                "amenity": "Baseball Stadium",
+                "popupContent": "This is where the Rockies play!"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [0.17685,51.6149]
             }
-          },
+        };
 
         L.geoJSON(geojsonFeature, {
             onEachFeature: onEachFeature
