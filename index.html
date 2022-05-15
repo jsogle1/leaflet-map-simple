@@ -87,6 +87,18 @@
             return div;
         };
         legend.addTo(map);
+        var popup = L.popup();
+        function onMapClick(e) {
+            popup
+                .setLatLng(e.latlng)
+                .setContent(
+                    "You clicked the map at -<br>" + 
+                    "<b>lon:</b> " + e.latlng.lng + "<br>" + 
+                    "<b>lat:</b> " + e.latlng.lat
+                )
+                .openOn(map);
+        }
+        map.on("click", onMapClick);
         L.tileLayer(
             "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", 
             {attribution: '&copy; <a href="http://' + 
