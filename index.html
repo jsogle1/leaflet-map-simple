@@ -25,6 +25,15 @@
     <div id="map"></div>
     <script>
         var map = L.map("map", {center: [54.6149,	-1.27685], zoom: 6});
+        var pol = L.polygon(
+        [
+            [57.4765361, -4.22535], 
+            [51.6149, 0.17685], 
+            [56.162426, -3.057957], 
+            [56.4704, -3.278]
+        ], 
+        {color: "red", fillColor: "yellow", weight: 4}
+        ).addTo(map);
         var line = L.polyline(
             [[57.6157,-3.5977], [57.611189,-3.605144]], 
             {color: "red", weight: 10}
