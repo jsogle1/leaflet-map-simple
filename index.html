@@ -27,9 +27,9 @@
         var map = L.map("map", {center: [54.6149,	-1.27685], zoom: 6});
         var pol = L.polygon(
         [
-            [57.6157, -3.5977], 
-            [51.6149, 0.17685], 
-            [54.6149, -1.27685], 
+            [57.6157, -3.5977],
+            [54.6149, -1.27685],
+            [51.6149, 0.17685],
             [56.4704, -3.278]
         ], 
         {color: "red", fillColor: "yellow", weight: 4}
@@ -38,11 +38,14 @@
             [[57.6157,-3.5977], [57.611189,-3.605144]], 
             {color: "red", weight: 10}
         ).addTo(map);
-        var pnt = L.marker([54.6149,	-1.27685]).addTo(map);
+        var pnt = L.marker([54.6149,-1.27685]).addTo(map);
         L.circleMarker(
             [57.6157,-3.5977], 
             {radius: 50, color: "black", fillColor: "red"}
         ).addTo(map);
+        pol.bindPopup(
+        "This is the path of <b>Macbeth</b> in <b>Shakespeare's Tragedie of Macbeth.</b>."
+        );
         L.tileLayer(
             "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", 
             {attribution: '&copy; <a href="http://' + 
