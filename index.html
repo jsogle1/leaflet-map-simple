@@ -99,10 +99,6 @@
                 )
                 .openOn(map);
         }
-        map.on("click", onMapClick);
-        $.getJSON("Macbeth.geojson", function(data) {
-            L.geoJSON(data).addTo(map);
-        });
         L.tileLayer(
             "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", 
             {attribution: '&copy; <a href="http://' + 
