@@ -101,17 +101,17 @@
 
         function onEachFeature(feature, layer) {
             // does this feature have a property named popupContent?
-            if (feature.properties && feature.properties.popupContent) {
-                layer.bindPopup(feature.properties.popupContent);
+            if (feature.properties && feature.properties.Setting) {
+                layer.bindPopup(feature.properties.Setting);
             }
         }
 
         var geojsonFeature = {
             "type": "Feature",
             "properties": {
-                "name": "Coors Field",
-                "amenity": "Baseball Stadium",
-                "popupContent": "This is where the Rockies play!"
+                "Play":"Macbeth",
+                "Setting":"England. Before the King’s Palace.",
+                "Act_Scene":"Act IV Scene III"
             },
             "geometry": {
                 "type": "Point",
