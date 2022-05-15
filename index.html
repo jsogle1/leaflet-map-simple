@@ -100,7 +100,7 @@
                 .openOn(map);
         }
         map.on("click", onMapClick);
-        $.getJSON("https://github.com/jsogle1/leaflet-map-simple/"+"data/Macbeth.geojson", function(data) {
+        $.getJSON("data/Macbeth.geojson", function(data) {
             L.geoJSON(data).addTo(map);
         });
         L.tileLayer(
